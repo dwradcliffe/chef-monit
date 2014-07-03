@@ -3,7 +3,9 @@
 # Recipe:: default
 #
 
-package "monit"
+package "monit" do
+  version node["monit"]["version"]
+end
 
 # configuration file
 template node["monit"]["main_config_path"] do
